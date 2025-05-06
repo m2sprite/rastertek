@@ -68,7 +68,12 @@ void SystemClass::Frame()
     //Read The X11 input
     ReadInput();
     result = m_Application->Frame(m_Input);
+    if(!result)
+    {
+      done = true;
+    }
   }
+
   return;
 }
 
@@ -141,7 +146,8 @@ bool SystemClass::InitializeWindow( int& screenWidth, int& screenHeight)
 
   XMapWindow(m_videoDisplay, m_hwnd);
   XStoreName(m_videoDisplay, m_hwnd, "Engine");
-if(FULL_SCREEN) {
+  if(FULL_SCREEN)
+  {
     wmState = XInternAtom(m_videoDisplay, "_NET_WM_STATE",False);
     fullScreenState = XInternAtom(m_videoDisplay, "_NET_WM_STATE_FULLSCREEN", False);
     memset(&fullScreenEvent, 0, sizeof(fullScreenEvent));

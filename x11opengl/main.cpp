@@ -1,11 +1,12 @@
 #include "system_class.h"
+#include <iostream>
 int main()
 {
   SystemClass *System;
   bool result;
   System = new SystemClass;
   result = System->Initialize();
-  if(result)
+  if(!result)
   {
     return -1;
   }

@@ -59,7 +59,7 @@ bool ApplicationClass::Frame(InputClass *Input)
 
 bool ApplicationClass::Render()
 {
-  m_OpenGL->BeginScene(0.0f, 0.0f, 0.0f, 1.0f);
+  m_OpenGL->BeginScene(1.0f, 1.0f, 0.0f, 1.0f);
   m_OpenGL->EndScene();
   return true;
 }
