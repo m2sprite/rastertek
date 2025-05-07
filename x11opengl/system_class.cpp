@@ -77,7 +77,7 @@ void SystemClass::Frame()
   return;
 }
 
-bool SystemClass::InitializeWindow( int& screenWidth, int& screenHeight)
+bool SystemClass::InitializeWindow( int& screenWidth, int& screenHeight )
 {
   Window rootWindow;
   XVisualInfo *visualInfo;

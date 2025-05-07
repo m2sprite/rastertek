@@ -1,5 +1,4 @@
 #include "system_class.h"
-#include <iostream>
 int main()
 {
   SystemClass *System;

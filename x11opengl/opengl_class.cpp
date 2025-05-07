@@ -1,17 +1,14 @@
 #include "opengl_class.h"
 OpenGLClass::OpenGLClass()
 {
-
 }
 
 OpenGLClass::OpenGLClass(const OpenGLClass& other)
 {
-
 }
 
 OpenGLClass::~OpenGLClass()
 {
-
 }
 
 bool OpenGLClass::Initialize(Display *display, Window win, int screenWidth, int screenHeight, float screenNear, float screenDepth, bool vsync)
@@ -600,25 +597,25 @@ void OpenGLClass::MatrixTranslation(float *matrix, float x, float y, float z)
 
 void OpenGLClass::MatrixTranspose(float *result, float *matrix)
 {
-  matrix[0] = matrix[0];
-  matrix[1] = matrix[4];
-  matrix[2] = matrix[8];
-  matrix[3] = matrix[12];
+  result[0] = matrix[0];
+  result[1] = matrix[4];
+  result[2] = matrix[8];
+  result[3] = matrix[12];
 
-  matrix[4] = matrix[1];
-  matrix[5] = matrix[5];
-  matrix[6] = matrix[9];
-  matrix[7] = matrix[13];
+  result[4] = matrix[1];
+  result[5] = matrix[5];
+  result[6] = matrix[9];
+  result[7] = matrix[13];
 
-  matrix[8] =  matrix[2];
-  matrix[9] =  matrix[6];
-  matrix[10] = matrix[10];
-  matrix[11] = matrix[14];
+  result[8] =  matrix[2];
+  result[9] =  matrix[6];
+  result[10] = matrix[10];
+  result[11] = matrix[14];
 
-  matrix[12] = matrix[3];
-  matrix[13] = matrix[7];
-  matrix[14] = matrix[11];
-  matrix[15] = matrix[15];
+  result[12] = matrix[3];
+  result[13] = matrix[7];
+  result[14] = matrix[11];
+  result[15] = matrix[15];
 
   return;
 }
